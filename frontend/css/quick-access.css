@@ -1,0 +1,81 @@
+/* Quick Access Menu Styles */
+.quick-access-menu {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 200px;
+    z-index: 1000;
+    display: none;
+    overflow: hidden;
+}
+
+.quick-access-item {
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.quick-access-item:hover {
+    background-color: #f5f5f5;
+}
+
+.quick-access-item i {
+    margin-right: 10px;
+    color: #4a6cf7;
+}
+
+/* Quick Access Cards on Home Page */
+.quick-access-card {
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.quick-access-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal Styles for Quick Access */
+.timetable-container {
+    overflow-x: auto;
+}
+
+.timetable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.timetable th, .timetable td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.timetable th {
+    background-color: #f5f5f5;
+}
+
+.exam-item, .event-item, .message-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+    padding: 16px;
+}
+
+.exam-header, .event-header, .message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.exam-date, .event-date, .message-date {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.exam-details, .event-details, .message-details {
+    color: #333;
+}

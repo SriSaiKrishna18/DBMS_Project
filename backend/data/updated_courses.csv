@@ -1,0 +1,51 @@
+course_id,course_name,credits,department
+101,Data Structures,4,CSE
+102,Circuit Theory,3,EEE
+103,Signals and Systems,4,ECE
+104,Structural Analysis,4,CIVIL
+105,Thermodynamics,4,MECH
+106,Power Systems,3,EEE
+107,Control Systems,3,EEE
+108,Digital Communication,4,ECE
+109,Fluid Mechanics,4,MECH
+110,Fluid Mechanics,4,CIVIL
+111,Algorithms,4,CSE
+112,VLSI Design,4,ECE
+113,Construction Planning,4,CIVIL
+114,Geotechnical Engineering,3,CIVIL
+115,Microprocessors,4,ECE
+116,Transportation Engineering,3,CIVIL
+117,Digital Electronics,4,EEE
+118,Electrical Machines,3,EEE
+119,Embedded Systems,3,ECE
+120,Operating Systems,3,CSE
+121,Signals and Systems,4,ECE
+122,Machine Design,4,MECH
+123,Computer Networks,3,CSE
+124,Machine Learning,4,CSE
+125,Structural Analysis,4,CIVIL
+126,Fluid Mechanics,3,CIVIL
+127,Circuit Theory,3,EEE
+128,Digital Communication,3,ECE
+129,Power Systems,4,EEE
+130,Data Structures,3,CSE
+131,VLSI Design,3,ECE
+132,Algorithms,4,CSE
+133,Construction Planning,4,CIVIL
+134,Operating Systems,3,CSE
+135,Computer Networks,4,CSE
+136,Control Systems,4,EEE
+137,Heat Transfer,3,MECH
+138,Manufacturing Technology,4,MECH
+139,Thermodynamics,3,MECH
+140,Fluid Mechanics,3,MECH
+141,Machine Design,4,MECH
+142,Geotechnical Engineering,3,CIVIL
+143,Machine Learning,4,CSE
+144,Digital Electronics,4,EEE
+145,Microprocessors,3,ECE
+146,Electrical Machines,3,EEE
+147,Data Structures,4,CSE
+148,Embedded Systems,4,ECE
+149,Circuit Theory,4,EEE
+150,Algorithms,4,CSE

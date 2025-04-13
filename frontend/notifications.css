@@ -1,0 +1,233 @@
+/* Notifications Styles */
+.notification-container {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    width: 350px;
+    max-height: 500px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+}
+
+.notification-container.open {
+    display: flex;
+}
+
+/* Improve notification toggle styling */
+.notification-toggle {
+    position: relative;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Add profile toggle styling */
+.profile-toggle {
+    position: relative;
+    cursor: pointer;
+    margin-left: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-toggle img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.profile-toggle:hover img {
+    border-color: var(--primary-color, #4361ee);
+}
+
+/* Rest of your notification styles remain the same */
+.notification-header {
+    background-color: var(--primary-color, #4361ee);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notification-header h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.notification-list {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+.notification-item {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.notification-item:hover {
+    background-color: #f9f9f9;
+}
+
+.notification-item.unread {
+    background-color: #f0f7ff;
+}
+
+.notification-item h4 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.notification-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+}
+
+.notification-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.notification-time {
+    color: #999;
+}
+
+.mark-read-btn {
+    background: none;
+    border: none;
+    color: var(--primary-color, #4361ee);
+    cursor: pointer;
+    font-size: 12px;
+    padding: 0;
+}
+
+.mark-read-btn:hover {
+    text-decoration: underline;
+}
+
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ff4757;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.notification-toggle {
+    position: relative;
+    cursor: pointer;
+}
+
+.empty-state {
+    padding: 20px;
+    text-align: center;
+    color: #999;
+    font-style: italic;
+}
+
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.badge {
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: bold;
+    color: white;
+}
+
+.badge-primary {
+    background-color: #4361ee;
+}
+
+.badge-info {
+    background-color: #3498db;
+}
+
+.badge-warning {
+    background-color: #f39c12;
+}
+
+.badge-danger {
+    background-color: #e74c3c;
+}
+
+.badge-secondary {
+    background-color: #95a5a6;
+}
+
+/* Dark mode support */
+[data-theme="dark"] .notification-container {
+    background-color: #36393f;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .notification-header {
+    background-color: #2f3136;
+}
+
+[data-theme="dark"] .notification-item {
+    border-bottom: 1px solid #2f3136;
+}
+
+[data-theme="dark"] .notification-item:hover {
+    background-color: #2f3136;
+}
+
+[data-theme="dark"] .notification-item.unread {
+    background-color: #2f3136;
+}
+
+[data-theme="dark"] .notification-item h4 {
+    color: #dcddde;
+}
+
+[data-theme="dark"] .notification-item p {
+    color: #b9bbbe;
+}
+
+[data-theme="dark"] .notification-time {
+    color: #72767d;
+}
+
+[data-theme="dark"] .empty-state {
+    color: #72767d;
+}

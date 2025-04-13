@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .login-container {
+            display: flex;
+            height: 100vh;
+        }
+        
+        .login-image {
+            flex: 1;
+            background: url('img3.jpeg') no-repeat center center;
+            background-size: cover;
+        }
+        
+        .login-form {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+        
+        .login-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            padding: 2rem;
+            width: 100%;
+            max-width: 400px;
+        }
+        
+        .login-logo {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .login-form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .login-form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .login-form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #3f72af;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .login-btn:hover {
+            background-color: #305a8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-image"></div>
+        <div class="login-form">
+            <div class="login-card">
+                <div class="login-logo">
+                    <h1>Student Portal</h1>
+                </div>
+                <form id="loginForm">
+                    <div class="login-form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="login-form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="login-btn">Login</button>
+                </form>
+                <p style="text-align: center; margin-top: 1rem;">
+                    <a href="#">Forgot password?</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+    
+    // ... existing code ...
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Add theme variables for login page */
+        :root {
+            --login-bg: #f5f5f5;
+            --container-bg: white;
+            --text-color: #333;
+            --input-border: #ddd;
+        }
+        
+        [data-theme="dark"] {
+            --login-bg: #1a1d24;
+            --container-bg: #2a2d3a;
+            --text-color: #f8f9fa;
+            --input-border: #3a3f4b;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--login-bg);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: var(--text-color);
+        }
+        
+        .container {
+            background-color: var(--container-bg);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--input-border);
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+            background-color: var(--container-bg);
+            color: var(--text-color);
+        }
+        
+        /* Theme toggle for login page */
+        .theme-toggle-login {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            color: var(--text-color);
+            background-color: var(--container-bg);
+            padding: 8px 12px;
+            border-radius: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .theme-toggle-login i {
+            margin-right: 5px;
+        }
+        
+        /* Rest of your existing login styles... */
+    </style>
+</head>
+<body>
+    <!-- Add theme toggle button -->
+    <div class="theme-toggle-login">
+        <i class="fas fa-sun"></i>
+        <span>Light Mode</span>
+    </div>
+    
+    <!-- Your existing login form content -->
+    <div class="container">
+        <div class="login-image"></div>
+        <div id="login-form">
+            <h1>Student Portal Login</h1>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter your username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+            </div>
+            <button type="submit" id="login-button">Login</button>
+            <div id="error-message" class="error-message"></div>
+        </div>
+    </div>
+
+    <script>
+        // Theme toggle functionality for login page
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.querySelector('.theme-toggle-login');
+            const htmlElement = document.documentElement;
+            
+            // Check for saved theme preference
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            htmlElement.setAttribute('data-theme', savedTheme);
+            updateThemeToggleUI(savedTheme);
+            
+            // Add click event to theme toggle button
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = htmlElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                
+                // Update HTML attribute
+                htmlElement.setAttribute('data-theme', newTheme);
+                
+                // Save preference to localStorage
+                localStorage.setItem('theme', newTheme);
+                
+                // Update UI
+                updateThemeToggleUI(newTheme);
+            });
+            
+            function updateThemeToggleUI(theme) {
+                const icon = themeToggle.querySelector('i');
+                const text = themeToggle.querySelector('span');
+                
+                if (theme === 'dark') {
+                    icon.className = 'fas fa-moon';
+                    text.textContent = 'Dark Mode';
+                } else {
+                    icon.className = 'fas fa-sun';
+                    text.textContent = 'Light Mode';
+                }
+            }
+        });
+        
+        // Your existing login JavaScript
+    </script>
+    <script src="login.js"></script>
+</body>
+</html> -->
+
+<!-- new login.html -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal - Login</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-image {
+            flex: 1;
+            background: url('img3.jpeg') no-repeat center center;
+            background-size: cover;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            padding: 30px;
+            text-align: center;
+        }
+        h1 {
+            color: #3498db;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: 500;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .error-message {
+            color: #e74c3c;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .toggle-form {
+            margin-top: 20px;
+            color: #3498db;
+            cursor: pointer;
+        }
+        .register-form {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-image"></div>
+        <div id="login-form">
+            <h1>Student Portal Login</h1>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter your username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+            </div>
+            <button id="login-button">Login</button>
+            <div id="login-error" class="error-message"></div>
+            <div class="toggle-form" id="show-register">Don't have an account? Register here</div>
+        </div>
+
+        <div id="register-form" class="register-form">
+            <h1>Register New Account</h1>
+            <div class="form-group">
+                <label for="reg-name">Full Name</label>
+                <input type="text" id="reg-name" placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+                <label for="reg-roll">Roll Number</label>
+                <input type="text" id="reg-roll" placeholder="Enter your roll number">
+            </div>
+            <div class="form-group">
+                <label for="reg-email">Email</label>
+                <input type="email" id="reg-email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="reg-phone">Phone Number</label>
+                <input type="text" id="reg-phone" placeholder="Enter your phone number">
+            </div>
+            <div class="form-group">
+                <label for="reg-branch">Branch</label>
+                <input type="text" id="reg-branch" placeholder="Enter your branch">
+            </div>
+            <div class="form-group">
+                <label for="reg-semester">Current Semester</label>
+                <input type="number" id="reg-semester" placeholder="Enter your current semester">
+            </div>
+            <div class="form-group">
+                <label for="reg-username">Username</label>
+                <input type="text" id="reg-username" placeholder="Choose a username">
+            </div>
+            <div class="form-group">
+                <label for="reg-password">Password</label>
+                <input type="password" id="reg-password" placeholder="Choose a password">
+            </div>
+            <button id="register-button">Register</button>
+            <div id="register-error" class="error-message"></div>
+            <div class="toggle-form" id="show-login">Already have an account? Login here</div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginForm = document.getElementById('login-form');
+            const registerForm = document.getElementById('register-form');
+            const showRegister = document.getElementById('show-register');
+            const showLogin = document.getElementById('show-login');
+            const loginButton = document.getElementById('login-button');
+            const registerButton = document.getElementById('register-button');
+            const loginError = document.getElementById('login-error');
+            const registerError = document.getElementById('register-error');
+
+            // Toggle between login and register forms
+            showRegister.addEventListener('click', function() {
+                loginForm.style.display = 'none';
+                registerForm.style.display = 'block';
+            });
+
+            showLogin.addEventListener('click', function() {
+                registerForm.style.display = 'none';
+                loginForm.style.display = 'block';
+            });
+
+            // Login functionality
+            loginButton.addEventListener('click', async function() {
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+
+                if (!username || !password) {
+                    loginError.textContent = 'Please enter both username and password';
+                    return;
+                }
+
+                try {
+                    const response = await fetch('/api/login', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ username, password })
+                    });
+
+                    const data = await response.json();
+
+                    if (!response.ok) {
+                        if (response.status === 404) {
+                            loginError.textContent = 'No user found with the given username';
+                        } else if (response.status === 401) {
+                            loginError.textContent = 'Invalid password';
+                        } else {
+                            loginError.textContent = data.error || 'Login failed';
+                        }
+                        return;
+                    }
+
+                    // Successful login
+                    localStorage.setItem('studentId', data.student_id);
+                    window.location.href = '/dashboard';
+                } catch (error) {
+                    console.error('Login error:', error);
+                    loginError.textContent = 'An error occurred during login';
+                }
+            });
+
+            // Register functionality
+            registerButton.addEventListener('click', async function() {
+                const name = document.getElementById('reg-name').value;
+                const roll_number = document.getElementById('reg-roll').value;
+                const email = document.getElementById('reg-email').value;
+                const phone_number = document.getElementById('reg-phone').value;
+                const branch = document.getElementById('reg-branch').value;
+                const current_semester = document.getElementById('reg-semester').value;
+                const username = document.getElementById('reg-username').value;
+                const password = document.getElementById('reg-password').value;
+
+                // Simple validation
+                if (!name || !roll_number || !email || !branch || !current_semester || !username || !password) {
+                    registerError.textContent = 'Please fill all required fields';
+                    return;
+                }
+
+                try {
+                    const response = await fetch('/api/register', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            name,
+                            roll_number,
+                            email,
+                            phone_number,
+                            branch,
+                            current_semester,
+                            username,
+                            password
+                        })
+                    });
+
+                    const data = await response.json();
+
+                    if (!response.ok) {
+                        registerError.textContent = data.error || 'Registration failed';
+                        return;
+                    }
+
+                    // Successful registration
+                    alert('Registration successful! Please login with your new account.');
+                    registerForm.style.display = 'none';
+                    loginForm.style.display = 'block';
+                } catch (error) {
+                    console.error('Registration error:', error);
+                    registerError.textContent = 'An error occurred during registration';
+                }
+            });
+        });
+    </script>
+</body>
+</html> -->
+
